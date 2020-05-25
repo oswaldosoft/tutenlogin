@@ -25,7 +25,7 @@
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx": "^2.4.0",
     "rxjs": "~6.4.0",
     "spinner": "^0.3.4",
