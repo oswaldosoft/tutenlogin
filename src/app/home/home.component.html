@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <h5>Tuten - Listado de Bookings por Usuario</h5>
+  </div>
+</div>
+
+<div class="row">
+<!--   <div class="d-flex justify-content-center mb-2" *ngIf="activoSpinner==true"> -->
+<div class="col-md-12 mt-3 mb-5">
+<ng-container *ngIf="info; then tabla; else notabla"></ng-container>
+<ng-template #tabla>
+  <div>
+   <table datatable  class="table table-fluid table-hover" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" style="width:100%;">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">BokingIDS</th>
+                <th scope="col">Clientes</th>
+                <th scope="col">Bookings Time</th>
+                <th scope="col">Direcciones</th>
+                <th scope="col">Bookings Prices</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let items of info">
+               <td>{{items.bookingId}}</td>
+                <td>{{items.tutenUserClient_firstName }} {{items.tutenUserClient_lastName }}</td>
+                <td>{{items.bookingTime}}</td>
+                <td>{{items.locationId_streetAddress}}</td>
+                <td>{{items.bookingPrice}}</td>
+              </tr>
+            </tbody>
+          </table>
+  </div>
+</ng-template>
+<ng-template #notabla> <div>Datos no disponibles.</div></ng-template>
+    </div>
+</div>

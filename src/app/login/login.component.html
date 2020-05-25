@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-5 offset-4 mt-4 mb-5">
+  <div class="card">
+    <h5 class="card-header">Tuten - Login</h5>
+    <div class="card-body">
+    <form [formGroup]="loginForm" method="post" (ngSubmit)="login()" autocomplete="off">
+       <div class="form-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" class="form-control" formControlName="emailuser" placeholder="Ingrese su email" id="emailuser" autocomplete="off" required>
+      </div>
+      <div class="alert-danger" *ngIf="emailuser.invalid && (emailuser.dirty || emailuser.touched)">
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center" *ngIf="emailuser.errors.required">
+         El email es un campo obligatorio.
+        </div>
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center" *ngIf="emailuser.errors.minlength">
+          El email debe tener al menos 5 caracteres de longitud.
+        </div>
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center"
+          *ngIf="(emailuser.dirty || emailuser.touched) && emailuser.invalid && emailuser.errors.pattern">
+          El valor debe ser una dirección de email válida.
+        </div>
+      </div>
+      <div class="form-group">
+        <mat-label>Password</mat-label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Ingrese el password" autocomplete="off" required>
+      </div>
+      <div class="alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center" *ngIf="password.errors.required">
+         La contrase&ntilde;a es un campo obligatorio.
+        </div>
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center" *ngIf="password.errors.minlength">
+          La contrase&ntilde;a debe tener al menos 4 caracteres de longitud.
+        </div>
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center" *ngIf="password.errors.maxlength">
+          La contrase&ntilde;a debe tener m&aacute;ximo 8 caracteres de longitud.
+        </div>
+      </div>
+      <div class="alert-danger" *ngIf="errores">
+        <div class="container-error-message pb-2 pt-2 d-flex justify-content-center mb-2" *ngIf="password.errors?.required">
+          {{errores}}
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mb-2" *ngIf="activoSpinner==true">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Cargando...</span>
+          </div>
+      </div>
+        <button mat-raised-button type="submit" class="btn-block btn  btn-outline-primary btn-sm" [disabled]="loginForm.invalid">Aceptar<i class="fa fa-sign-in pl-2"></i></button>
+        <button mat-stroked-button  type="reset"  class="btn-block btn btn-primary btn-sm" (click)="onResetForm()" >Cancelar<i class="fas fa-power-off pl-2"></i></button>
+    </form>
+    </div>
+  </div>
+  </div>
+</div>

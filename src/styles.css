@@ -1,0 +1,10 @@
+
+ header{background: #642B73; background: -webkit-linear-gradient(to top, #C6426E, #642B73); background: linear-gradient(to top, #C6426E, #642B73);}
+ footer{position:fixed;
+  bottom:0px;
+  width: 100%;background: #642B73; background: -webkit-linear-gradient(to bottom, #C6426E, #642B73); background: linear-gradient(to bottom, #C6426E, #642B73);}
+ nav{ background: #EAEAEA;}
+ #fondo-menu{margin-bottom: 35px;}
+ .ng-valid[required], .ng-valid.required{border-left: 3px solid #42a948;}
+ .ng-invalid:not(form){border-left: 3px solid #a90400;}
+ .letter{font-size: 10px;}

@@ -1,0 +1,14 @@
+
+select:focus { width: 25%; border: 1px groove #c31432; border-radius: 4px; background-color: #f1f1f1; color:#c31432; font-size: 12px;}
+select {width: 25%; border: 1px groove #c31432;border-radius: 4px;background-color: #f1f1f1;color:#c31432;font-size: 12px;}
+label{color:#c31432;font-size: 15px;}
+.sorting_1{ color:#d7d2cc; font-size: 12px;}
+td{color:#89216B;font-size: 13px;}
+th.sorting, th.sorting_asc, th.sorting_desc{background: none;border: none !important;font-size: 12px;}
+a.paginate_button{color:#89216B;font-size: 8px;}
+#DataTables_Table_0_info{color:#89216B;font-size: 10px;}
+.dataTables_paginate{color: red !important;} 
+#DataTables_Table_0_last{color:#c31432;font-size: 8px;border: 1px groove #c31432;} 
+.paginate_button{color:#c31432;font-size: 10px;border: 1px groove #c31432;}
+.letter{font-size: 10px;}
+input[type=search]{ border: 1px groove #c31432;border-radius: 4px;font-size: 13px;color:#c31432; -webkit-appearance: none;}
